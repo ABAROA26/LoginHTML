@@ -12,9 +12,49 @@ body {
 .main_container {
   height: 100%;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   background: url("../img/background.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.login_container {
+  backdrop-filter: blur(2px);
+  border-style: solid;
+  border-color: #bf88eb;
+  padding: 30px;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  font-style: bold;
+  font-family: cursive;
+}
+
+.input_group {
+  width: 90%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 15px;
+  border-color: #bf88eb;
+  border-style: solid;
+  border-width: 1px;
+}
+.input_group > input {
+  background: transparent;
+  border-style: none;
+}
+
+.input_group > svg {
+  float: right;
+  color: white;
 }

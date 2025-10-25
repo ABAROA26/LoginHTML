@@ -12,9 +12,9 @@ if ($username == 'diego') {
         header("Location: ../../home.html");
         exit();
     } 
-}else 
+}else{ 
     header("Location: ../../index.html");
     exit();
-
+}
     
 ?>

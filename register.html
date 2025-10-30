@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Login Diego Emiliano Nuñez Abaroa</title>
+    <title>Register</title>
     <meta name="author" content="Diego Emiliano Nuñez Abaroa" />
     <meta
       name="description"
-      content="Diseño de mi primer Login en HTML y CSS"
+      content="Diseño de mi primer Registro en HTML y CSS"
     />
     <meta name="keywords" content="cv,backend" />
     <link rel="stylesheet" type="text/css" href="assets/styles/login.css" />
@@ -16,11 +16,17 @@
   <body>
     <div class="main_container">
       <div class="login_container">
-        <h1>Login</h1>
+        <h1>Registro</h1>
 
         <form action="./assets/app/AuthController.php" method="POST">
           <div class="input_group">
-            <input class="text" name="email" type="text" placeholder="Email" />
+            <input
+              class="text"
+              name="nombre"
+              type="text"
+              placeholder="Nombre completo"
+              required
+            />
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
               aria-hidden="true"
@@ -40,10 +46,37 @@
 
           <div class="input_group">
             <input
+              class="text"
+              name="email"
+              type="email"
+              placeholder="Email"
+              required
+            />
+            <svg
+              class="w-6 h-6 text-gray-800 dark:text-white"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"
+              />
+            </svg>
+          </div>
+
+          <div class="input_group">
+            <input
               class="pass"
               name="password"
               type="password"
-              placeholder="Password"
+              placeholder="Contraseña"
+              required
             />
             <svg
               class="w-6 h-6 text-gray-800 dark:text-white"
@@ -66,23 +99,27 @@
 
           <div class="form_footer">
             <div>
-              <input type="checkbox" />
-              <label class="remember"> Remember Me</label>
+              <input type="checkbox" id="terminos" required />
+              <label class="remember" for="terminos">
+                Acepto términos y condiciones</label
+              >
             </div>
-
-            <a class="forgot" href="#"> Forgot Password? </a>
           </div>
 
-          <button type="submit" class="login_button">Login</button>
+          <button type="submit" class="login_button">
+            <a href="index.html"></a>Registrarse
+          </button>
 
-          <input type="hidden" name="action" value="login" />
+          <input type="hidden" name="action" value="register" />
         </form>
 
         <label class="dont_account">
-          Don't have an account?
-          <a class="regis" href="register.html">Register</a>
+          ¿Ya tienes cuenta?
+          <a class="regis" href="index.html">Iniciar sesión</a>
         </label>
       </div>
     </div>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="es"></html>
